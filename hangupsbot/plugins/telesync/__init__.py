@@ -629,6 +629,7 @@ def is_animated_photo(file_name):
 
 
 @handler.register(priority=5, event=hangups.ChatMessageEvent)
+@asyncio.coroutine
 def _on_hangouts_message(bot, event, command=""):
     global tg_bot
 

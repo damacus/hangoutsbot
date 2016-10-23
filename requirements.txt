@@ -1,5 +1,5 @@
 # BOT DEPENDENCIES #
-git+https://github.com/hangoutsbot/hangups.git
+git+ssh://git@github.com/Manko10/hangups.git
 appdirs
 asyncio
 aiohttp >= 0.21.2

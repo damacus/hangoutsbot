@@ -12,6 +12,7 @@ import telepot.exception
 from handlers import handler
 from commands import command
 import random
+import cgi
 
 logger = logging.getLogger(__name__)
 
@@ -647,10 +648,12 @@ def _on_hangouts_message(bot, event, command=""):
 
     if event.conv_id in ho2tg_dict:
         user_gplus = 'https://plus.google.com/u/0/{uid}/about'.format(uid=event.user_id.chat_id)
-        text = '<a href="{user_gplus}">{uname}</a> <b>({gname})</b>: {text}'.format(uname=event.user.full_name,
-                                                                                    user_gplus=user_gplus,
-                                                                                    gname=event.conv.name,
-                                                                                    text=sync_text)
+        text = '<a href="{user_gplus}">{uname}</a> <b>({gname})</b>: {text}'.format(
+            uname=cgi.escape(event.user.full_name),
+            user_gplus=user_gplus,
+            gname=cgi.escape(event.conv.name),
+            text=sync_text)
+        logger.info(text)
         yield from tg_bot.sendMessage(ho2tg_dict[event.conv_id], text, parse_mode='html',
                                       disable_web_page_preview=True)
         if has_photo:

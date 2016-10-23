@@ -7,7 +7,7 @@ import hangups
 import plugins
 import aiohttp
 import telepot
-import telepot.async
+import telepot.aio
 import telepot.exception
 from handlers import handler
 from commands import command
@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 # TELEGRAM BOT
 
-class TelegramBot(telepot.async.Bot):
+class TelegramBot(telepot.aio.Bot):
     def __init__(self, hangupsbot):
         self.config = hangupsbot.config.get_by_path(['telesync'])
         if self.config['enabled']:

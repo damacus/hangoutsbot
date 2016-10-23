@@ -1,15 +1,6 @@
 # Preparing your Environment
 
-**install python 3.4 from source**
-```
-wget https://www.python.org/ftp/python/3.4.2/Python-3.4.2.tgz
-tar xvf Python-3.4.2.tgz
-cd Python-3.4.2
-./configure
-make
-make test
-sudo make install
-```
+**install python 3.5**
 
 **git clone the repository**
 ```

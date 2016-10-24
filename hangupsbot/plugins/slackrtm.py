@@ -1369,7 +1369,8 @@ def _initialise(bot):
     plugins.register_handler(_handle_membership_change, type="membership")
     plugins.register_handler(_handle_rename, type="rename")
 
-    plugins.register_admin_command(["slack_help", "slacks", "slack_channels", "slack_listsyncs", "slack_syncto", "slack_disconnect", "slack_setsyncjoinmsgs", "slack_setimageupload", "slack_sethotag","slack_users", "slack_setslacktag", "slack_showslackrealnames"])
+    plugins.register_user_command(["slack_syncto", "slack_disconnect", "slack_sethotag", "slack_setslacktag", "slack_showslackrealnames"])
+    plugins.register_admin_command(["slack_help", "slacks", "slack_channels", "slack_listsyncs", "slack_setsyncjoinmsgs", "slack_users",  "slack_setimageupload"])
 
 
 @asyncio.coroutine

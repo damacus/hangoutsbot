@@ -1,5 +1,14 @@
 # Preparing your Environment
 
+**Using docker**
+
+```
+git clone <repository url>
+cd <repository name>
+docker build -t hangoutsbot/hangoutsbot .
+docker run -it -d -v $(pwd):/app -v $(pwd)/config:/root/.local/share/hangupsbot hangoutsbot/hangoutsbot
+```
+
 **install python 3.5**
 
 **git clone the repository**

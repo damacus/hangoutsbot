@@ -1,0 +1,13 @@
+machine:
+  python:
+    version: pypy-3.5.2
+  services:
+    - docker
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker login --email=$HEROKU_EMAIL --username=$HEROKU_USERNAME --password=$HEROKU_PASSWORD registry.heroku.com
+      - docker tag damacus/hangoutsbot registry.heroku.com/$HEROKU_APP_NAME/web
+      - docker push registry.heroku.com/$HEROKU_APP_NAME/web

@@ -4,6 +4,10 @@ machine:
   services:
     - docker
 
+test:
+  override:
+    - echo "Ignore Tests"
+
 deployment:
   hub:
     branch: master

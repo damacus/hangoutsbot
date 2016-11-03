@@ -1,6 +1,6 @@
 # BOT DEPENDENCIES #
 # tmp branch fixes authentication and ho images see hangoutsbot/hangups prs #3,4
-git+ssh://git@github.com/Manko10/hangups.git@tmp
+git+https://github.com/hangoutsbot/hangups.git
 appdirs
 asyncio
 aiohttp >= 0.21.2

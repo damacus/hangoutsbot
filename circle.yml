@@ -7,6 +7,11 @@ machine:
 test:
   override:
     - echo "Ignore Tests"
+deployment:
+  staging:
+    branch: production 
+    heroku:
+      appname: $HEROKU_APP_NAME 
 
 deployment:
   hub:

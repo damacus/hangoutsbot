@@ -18,5 +18,5 @@ deployment:
     branch: production 
     commands:
       - docker login --email=$HEROKU_USERNAME --username=$HEROKU_USERNAME --password=$HEROKU_PASSWORD registry.heroku.com
-      - docker tag damacus/hangoutsbot registry.heroku.com/$HEROKU_APP_NAME/web
+      - docker tag edgemaster/hangoutsbot registry.heroku.com/$HEROKU_APP_NAME/web
       - docker push registry.heroku.com/$HEROKU_APP_NAME/web
